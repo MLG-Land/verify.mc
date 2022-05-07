@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MLG-Land/verify.mc/issues"
   },
-  "homepage": "https://github.com/MLG-Land/verify.mc#readme"
+  "homepage": "https://github.com/MLG-Land/verify.mc#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
 }
