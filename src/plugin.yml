@@ -1,0 +1,5 @@
+main: net.mlgland.verifymc.VerifyMC
+version: 0.0.1
+author: SidGames5
+name: VerifyMC
+api-version: 1.8
