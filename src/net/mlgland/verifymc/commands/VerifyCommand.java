@@ -1,6 +1,7 @@
 package net.mlgland.verifymc.commands;
 
 import net.mlgland.verifymc.secrets.EncoderSecrets;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -53,9 +54,8 @@ public class VerifyCommand implements CommandExecutor {
             sha256_HMAC.init(secret_key);
 
             hash = Base64.getEncoder().encodeToString(sha256_HMAC.doFinal(message.getBytes()));
-            System.out.println(hash);
         } catch (Exception e) {
-            System.out.println("Error");
+            System.out.println("[VerifyMC] [Error]");
         }
         String query = encodedParam + "." + hash;
         String encodedQuery = encodeURL(query);
@@ -63,6 +63,7 @@ public class VerifyCommand implements CommandExecutor {
 
         String resultURL = baseURL + encodedQuery;
         player.sendMessage("Click this link to verify your discord account: " + resultURL);
+        player.sendMessage(ChatColor.RED + "Do not share this link with anyone! It will expire in 30 minutes from now.");
 
         return true;
 
