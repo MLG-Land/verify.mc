@@ -9,3 +9,6 @@ server/
 .gradle/
 .idea/
 .vscode/
+
+src/net/mlgland/verifymc/secrets/
+src/net/mlgland/verifymc/secrets/EncoderSecrets.java
