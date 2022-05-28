@@ -27,7 +27,8 @@ public class VerifyCommand implements CommandExecutor {
         String playerUUID = String.valueOf(player.getUniqueId());
         String timestamp = String.valueOf(Instant.now().getEpochSecond());
         String combined = playerName + "," + playerUUID + "," + timestamp;
-        String encodedParam = Base64.getEncoder().encodeToString(combined.getBytes());
+        String json = "{\"username\":\"" + playerName + "\",\"uuid\":\"" + playerUUID + "\",\"time\":\"" + timestamp + "\"" + "}";
+        String encodedParam = Base64.getEncoder().encodeToString(json.getBytes());
         String resultURL = baseURL + encodedParam;
         player.sendMessage("Click this link to verify you discord account: " + resultURL);
 

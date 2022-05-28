@@ -3,3 +3,12 @@ version: 0.0.1
 author: SidGames5
 name: VerifyMC
 api-version: 1.8
+commands:
+  verify:
+    description: Starts the verification process for the player's discord account
+    usage: /<command>
+    aliases:
+      - verifydsc
+      - vdiscord
+      - verifydiscord
+      - vdsc
