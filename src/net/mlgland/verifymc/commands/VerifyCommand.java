@@ -37,7 +37,7 @@ public class VerifyCommand implements CommandExecutor {
             return true;
         }
 
-        String baseURL = "http://api.mlgland.net/accounts/linkdiscord/link?info=";
+        String baseURL = "https://api.mlgland.net/accounts/linkdiscord/link?info=";
         String playerName = player.getName();
         String playerUUID = String.valueOf(player.getUniqueId());
         String timestamp = String.valueOf(Instant.now().getEpochSecond());
