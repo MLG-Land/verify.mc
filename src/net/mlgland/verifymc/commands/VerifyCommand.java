@@ -47,13 +47,12 @@ public class VerifyCommand implements CommandExecutor {
         String hash = null;
         try {
             String secret = EncoderSecrets.secret;
-            String message = json;
 
             Mac sha256_HMAC = Mac.getInstance("HmacSHA256");
             SecretKeySpec secret_key = new SecretKeySpec(secret.getBytes(), "HmacSHA256");
             sha256_HMAC.init(secret_key);
 
-            hash = Base64.getEncoder().encodeToString(sha256_HMAC.doFinal(message.getBytes()));
+            hash = Base64.getEncoder().encodeToString(sha256_HMAC.doFinal(json.getBytes()));
         } catch (Exception e) {
             System.out.println("[VerifyMC] [Error]");
         }
