@@ -62,7 +62,7 @@ public class VerifyCommand implements CommandExecutor {
 
 
         String resultURL = baseURL + encodedQuery;
-        player.sendMessage("Click this link to verify your discord account: " + resultURL);
+        player.sendMessage("Click this link to verify your discord account: " + ChatColor.BLUE + resultURL);
         player.sendMessage(ChatColor.RED + "Do not share this link with anyone! It will expire in 30 minutes from now.");
 
         return true;
